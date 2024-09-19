@@ -1,14 +1,12 @@
 package Thread_20230726.Thread_Exception;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.ThreadFactory;
 
 public class ThreadFactoryTest implements ThreadFactory
 {
 	@Override
-	public Thread newThread(@NotNull Runnable r)
+	public Thread newThread( Runnable r)
 	{
 		Thread thread = new Thread(r);
 		thread.setUncaughtExceptionHandler((t,e)->{
